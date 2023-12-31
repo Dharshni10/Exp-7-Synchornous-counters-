@@ -1,10 +1,19 @@
 # Exp-6-Synchornous-counters - up counter and down counter 
-### AIM: To implement 4 bit up and down counters and validate  functionality.
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
-### THEORY 
 
-## UP COUNTER 
+### AIM: 
+
+To implement 4 bit up and down counters and validate  functionality.
+
+### EQUIPMENTS REQUIRED:
+
+HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
+
+SOFTWARE REQUIRED:   Quartus prime
+
+### THEORY: 
+
+### UP COUNTER
+
 The counter is a digital sequential circuit and here it is a 4 bit counter, which simply means it can count from 0 to 15 and vice versa based upon the direction of counting (up/down). 
 
 The counter (“count“) value will be evaluated at every positive (rising) edge of the clock (“clk“) cycle.
@@ -19,70 +28,90 @@ Binary count sequence, paying attention to patterns preceding the “toggling”
 
 Note that each bit in this four-bit sequence toggles when the bit before it (the bit having a lesser significance, or place-weight), toggles in a particular direction: from 1 to 0.
 
-
-
- 
- 
-
 Starting with four J-K flip-flops connected in such a way to always be in the “toggle” mode, we need to determine how to connect the clock inputs in such a way so that each succeeding bit toggles when the bit before it transitions from 1 to 0.
 
 The Q outputs of each flip-flop will serve as the respective binary bits of the final, four-bit count:
 
- 
- 
-
 Four-bit “Up” Counter
+
 ![image](https://user-images.githubusercontent.com/36288975/169644758-b2f4339d-9532-40c5-af40-8f4f8c942e2c.png)
 
-
-
-## DOWN COUNTER 
+### DOWN COUNTER 
 
 As well as counting “up” from zero and increasing or incrementing to some preset value, it is sometimes necessary to count “down” from a predetermined value to zero allowing us to produce an output that activates when the zero count or some other pre-set value is reached.
 
 This type of counter is normally referred to as a Down Counter, (CTD). In a binary or BCD down counter, the count decreases by one for each external clock pulse from some preset value. Special dual purpose IC’s such as the TTL 74LS193 or CMOS CD4510 are 4-bit binary Up or Down counters which have an additional input pin to select either the up or down count mode.
+
 ![image](https://user-images.githubusercontent.com/36288975/169644844-1a14e123-7228-4ed8-81a9-eb937dff4ac8.png)
 
-
 4-bit Count Down Counter
-### Procedure
-/* write all the steps invloved */
 
+### Procedure:
 
+1.Create a new project in Quartus2 software .
 
-### PROGRAM 
-/*
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+2.Name the project as uc for upcounter and dc for down counter.
 
+3.Create a new verilog hdl file in the project file.
 
+4.Name the module declare as dc and uc for down counter and upcounter.
 
+5.Within the module declare input and output variables.
 
+6.Create a loop using if-else with condition parameter as reset.
 
+7.End the loop.
 
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
+8.End the module
 
+### PROGRAM: 
 
+Program for flipflops and verify its truth table in quartus using Verilog programming.
 
+Developed by: DHARSHNI V M
 
+Register Number: 212223240029 
 
+### CODE:
 
+UP COUNTER
 
+![UPCOUNTER CODE](https://github.com/Dharshni10/Exp-7-Synchornous-counters-/assets/145801097/df6e1cc6-d0c2-4a9a-ad6d-a7a8a8d4b6e6)
 
+DOWN COUNTER
 
-### TIMING DIGRAMS FOR COUNTER  
+![DOWNCOUNTER CODE](https://github.com/Dharshni10/Exp-7-Synchornous-counters-/assets/145801097/7ce6cff9-b56e-4410-878e-f0a483589ae3)
 
+### RTL LOGIC UP COUNTER AND DOWN COUNTER:  
 
+UP COUNTER
 
+![UPCOUNTER RTL](https://github.com/Dharshni10/Exp-7-Synchornous-counters-/assets/145801097/dcf83d76-14f7-4ec8-8aa3-a95c67ecbbb8)
 
+DOWN COUNTER
 
-### TRUTH TABLE 
+![DOWNCOUNTER RTL](https://github.com/Dharshni10/Exp-7-Synchornous-counters-/assets/145801097/e72335cc-643e-47a7-9c3d-9c11cc22831c)
 
+### TIMING DIGRAMS FOR COUNTER:  
 
+UP COUNTER
 
+![UP TIME](https://github.com/Dharshni10/Exp-7-Synchornous-counters-/assets/145801097/26d0bc25-3e8d-4b1b-8047-b5b020d4cc03)
 
+DOWN COUNTER
 
+![THE REAL DOWN TIME](https://github.com/Dharshni10/Exp-7-Synchornous-counters-/assets/145801097/73328601-138b-49e3-b367-d5fc1aab2ec3)
+
+### TRUTH TABLE: 
+
+UP COUNTER
+
+![UP TT TABLE](https://github.com/Dharshni10/Exp-7-Synchornous-counters-/assets/145801097/8ae7ea13-c409-4e34-a7cd-74c873aeaaea)
+
+DOWN COUNTER
+
+![DOWN TT](https://github.com/Dharshni10/Exp-7-Synchornous-counters-/assets/145801097/06e88704-619c-4e2a-ab6d-cec3c0be9b43)
 
 ### RESULTS 
+
+Thus the Program executed Successfully.
